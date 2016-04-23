@@ -288,14 +288,14 @@ namespace SoappyMcHaggis
             if (CollisionArea.Bottom > level.MapBounds.Bottom)
             {
                 adv.currentGameState = FabulousAdventure.GameState.GameOverLose;
-                Sound.Stop(level.BGMCue);
-                Sound.Play("Laughing");
+                //Sound.Stop(level.BGMCue);
+                //Sound.Play("Laughing");
             }
             if (health <= 0)
             {
                 adv.currentGameState = FabulousAdventure.GameState.GameOverLose;
-                Sound.Stop(level.BGMCue);
-                Sound.Play("Laughing");
+                //Sound.Stop(level.BGMCue);
+                //Sound.Play("Laughing");
             }
         }
 

@@ -128,7 +128,7 @@ namespace SoappyMcHaggis
 
                 }
             }
-            BGMCue = Sound.Play(BGM);
+            //BGMCue = Sound.Play(BGM);
         }
 
         public void Draw(SpriteBatch theSpriteBatch, Camera theCamera)
@@ -148,7 +148,7 @@ namespace SoappyMcHaggis
         {
             if(EnemyManager.AllDead()){
                 adv.currentGameState = FabulousAdventure.GameState.GameOverWin;
-                Sound.Stop(BGMCue);
+                //Sound.Stop(BGMCue);
             }
         }
 
