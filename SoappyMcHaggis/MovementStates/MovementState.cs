@@ -1,4 +1,4 @@
-namespace SoappMcHaggis
+namespace SoappyMcHaggis
 {
     public interface MovementState
     {
