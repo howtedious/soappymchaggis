@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SoappMcHaggis
+namespace SoappyMcHaggis
 {
     public static class EnemyManager
     {

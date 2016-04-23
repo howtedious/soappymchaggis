@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework.Audio;
 
-namespace SoappMcHaggis
+namespace SoappyMcHaggis
 {
     public class Sound
     {

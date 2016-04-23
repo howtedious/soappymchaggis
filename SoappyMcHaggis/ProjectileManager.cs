@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SoappMcHaggis
+namespace SoappyMcHaggis
 {
     public static class ProjectileManager
     {

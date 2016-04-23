@@ -119,7 +119,6 @@
     <Compile Include="MovementStates\MovementState.cs" />
     <Compile Include="MovementStates\MovingLeft.cs" />
     <Compile Include="MovementStates\MovingRight.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="ProjectileManager.cs" />
     <Compile Include="Projectiles\Fireball.cs" />
     <Compile Include="Projectiles\Projectile.cs" />

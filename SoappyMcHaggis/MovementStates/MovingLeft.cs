@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace SoappMcHaggis
+namespace SoappyMcHaggis
 {
     public class MovingLeft : MovementState
     {
