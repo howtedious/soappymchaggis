@@ -35,7 +35,8 @@ namespace SoappyMcHaggis
         public FabulousAdventure()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            contentManager = new ContentManager(Services);
+            Content.RootDirectory = "Content";            
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace SoappyMcHaggis
         /// </summary>
         protected override void LoadContent()
         {
-            Sound.Initialise();
+            //Sound.Initialise();
             Fireball.LoadContent(contentManager);
             Vortex.LoadContent(contentManager);
             Fireballer.LoadContent(contentManager);
@@ -77,7 +78,7 @@ namespace SoappyMcHaggis
         {
             // TODO: Unload any non ContentManager content here
             contentManager.Dispose();
-            Sound.Shutdown();
+            //Sound.Shutdown();
         }
 
         /// <summary>
@@ -119,7 +120,7 @@ namespace SoappyMcHaggis
 
             }
 
-            Sound.Update();
+            //Sound.Update();
 
             base.Update(gameTime);
         }
