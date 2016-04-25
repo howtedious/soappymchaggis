@@ -52,17 +52,18 @@ namespace SoappyMcHaggis
             currentLevel.Load(reader);
 
             //Get background music for the level from the BackgroundMusic node
-            XmlNode music = currentLevel.GetElementsByTagName("Level/Music").Cast<XmlNode>().First();
-            BGM = music.InnerText;
+            XmlNodeList music = currentLevel.DocumentElement.GetElementsByTagName("BackgroundMusic");
+            
+            BGM = music[0].InnerText;
 
             //Get start position for the level from the StartTile node
-            XmlNode startPosition = currentLevel.GetElementsByTagName("Level/StartPosition").Cast<XmlNode>().First();
-            StartPosition = new Vector2(float.Parse(startPosition.Attributes["XPosition"].Value), float.Parse(startPosition.Attributes["YPosition"].Value));
+            XmlNodeList startPosition = currentLevel.GetElementsByTagName("StartPosition");
+            StartPosition = new Vector2(float.Parse(startPosition[0].Attributes["XPosition"].Value), float.Parse(startPosition[0].Attributes["YPosition"].Value));
 
-            XmlNode mapSize = currentLevel.GetElementsByTagName("Level/MapSize").Cast<XmlNode>().First();
-            MapBounds = new Rectangle(0, 0, int.Parse(mapSize.Attributes["MapWidth"].Value), int.Parse(mapSize.Attributes["MapHeight"].Value));
+            XmlNodeList mapSize = currentLevel.GetElementsByTagName("MapSize");
+            MapBounds = new Rectangle(0, 0, int.Parse(mapSize[0].Attributes["MapWidth"].Value), int.Parse(mapSize[0].Attributes["MapHeight"].Value));
 
-            XmlNodeList tileLayers = currentLevel.GetElementsByTagName("Level/TileLayer");
+            XmlNodeList tileLayers = currentLevel.GetElementsByTagName("TileLayer");
 
             foreach (XmlNode tileLayer in tileLayers)
             {
@@ -83,7 +84,7 @@ namespace SoappyMcHaggis
                 }
             }
 
-            XmlNodeList doors = currentLevel.GetElementsByTagName("Level/Doors");
+            XmlNodeList doors = currentLevel.GetElementsByTagName("Doors");
 
             m_Doors = new List<Door>();
 
@@ -104,7 +105,7 @@ namespace SoappyMcHaggis
                 }
             }
 
-            XmlNodeList enemies = currentLevel.GetElementsByTagName("Level/Enemies");
+            XmlNodeList enemies = currentLevel.GetElementsByTagName("Enemies");
 
             foreach (XmlNode enemy in enemies)
             {
